@@ -20,14 +20,14 @@ app.use(cors({
 //DB connection
 connectDB();
 
-// Set CSP header middleware
-app.use((req, res, next) => {
-    res.setHeader(
-      'Content-Security-Policy',
-      "script-src-elem 'self' 'unsafe-inline' conoret.com;"
-    );
-    next();
-});
+// // Set CSP header middleware
+// app.use((req, res, next) => {
+//     res.setHeader(
+//       'Content-Security-Policy',
+//       "script-src-elem 'self' 'unsafe-inline' conoret.com;"
+//     );
+//     next();
+// });
 
 //api endpoint
 app.use("/api/food", foodRouter)
